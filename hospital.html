@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Hub - Hospital</title>
+    <link rel="stylesheet" href="styles_hospital.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- Add this button right after the logo div in the navbar -->
+<nav class="navbar">
+    <div class="logo">Health Hub</div>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="restaurant.html">Restaurant</a></li>
+        <li><a href="hospital.html">Hospital</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="ent.html">Entertainment</a></li>
+    </ul>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Our Hospital</h1>
+            <p>Professional Healthcare Services</p>
+        </div>
+    </section>
+
+    <!-- Clinics Section -->
+    <section class="clinics">
+        <div class="container">
+            <h2>Our Specialized Clinics</h2>
+            <div class="clinic-grid">
+                <div class="clinic-card">
+                    <img src="https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg" alt="General Medicine">
+                    <h3>General Medicine</h3>
+                    <p>Comprehensive medical care for all ages</p>
+                    <button class="book-btn">Book Appointment</button>
+                </div>
+
+                <div class="clinic-card">
+                    <img src="https://img.freepik.com/free-photo/dentist-examining-patient_23-2147767911.jpg" alt="Dental Clinic">
+                    <h3>Dental Clinic</h3>
+                    <p>Complete dental care solutions</p>
+                    <button class="book-btn">Book Appointment</button>
+                </div>
+
+                <div class="clinic-card">
+                    <img src="https://img.freepik.com/free-photo/pediatrician-examining-baby_23-2148970303.jpg" alt="Pediatrics">
+                    <h3>Pediatrics</h3>
+                    <p>Specialized care for children</p>
+                    <button class="book-btn">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Form Section -->
+    <section class="appointment">
+        <div class="container">
+            <h2>Book an Appointment</h2>
+            <form class="appointment-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="general">General Medicine</option>
+                        <option value="dental">Dental Clinic</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="orthopedics">Orthopedics</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Notes</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="emergency">
+        <div class="container">
+            <div class="emergency-content">
+                <h2>Emergency?</h2>
+                <p>Call our 24/7 Emergency Hotline</p>
+                <div class="emergency-number">1-800-HEALTH</div>
+                <button class="emergency-btn">Call Now</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+    
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+    
+        document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+        }));
+    </script>
+</body>
+</html>

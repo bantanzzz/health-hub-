@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Health Hub</div>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="restaurant.html">Restaurant</a></li>
+      <li><a href="hospital.html">Hospital</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="ent.html">Entertainment</a></li>
+    </ul>
+  </nav>
+
+  <!-- Intro Section -->
+  <section class="intro" id="intro">
+    <div class="intro-container">
+        <div class="intro-text">
+            <h1>Welcome to <span class="highlight">Health Hub</span></h1>
+            <p>Your journey to better health starts here</p>
+            <div class="intro-features">
+                <div class="feature">
+                    <span class="feature-icon">👨‍⚕️</span>
+                    <p>hospital</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🏆</span>
+                    <p>Entertainment</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📱</span>
+                    <p>Restaurant</p>
+                </div>
+            </div>
+            <button class="get-started">Get Started</button>
+        </div>
+        <div class="intro-image">
+            <img src="https://img.freepik.com/free-photo/medium-shot-doctor-with-crossed-arms_23-2148868176.jpg" alt="Doctor">
+        </div>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+ 
+  </section>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+    }));
+  </script>
+
+</body>
+</html>

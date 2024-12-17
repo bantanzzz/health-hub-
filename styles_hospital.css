@@ -1,0 +1,314 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #008cba;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 400px;
+    background-image: url('https://img.freepik.com/free-photo/team-doctors-standing-hospital-corridor_107420-84766.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+/* Clinics Section */
+.clinics {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.clinics h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.clinic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.clinic-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.clinic-card:hover {
+    transform: translateY(-10px);
+}
+
+.clinic-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.clinic-card h3 {
+    padding: 20px;
+    margin: 0;
+    color: #333;
+}
+
+.clinic-card p {
+    padding: 0 20px 20px;
+    color: #666;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #006688;
+}
+
+/* Appointment Form */
+.appointment {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.appointment h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.appointment-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #006688;
+}
+
+/* Emergency Section */
+.emergency {
+    background-color: #ff4444;
+    color: white;
+    padding: 40px 0;
+}
+
+.emergency-content {
+    text-align: center;
+}
+
+.emergency h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.emergency-number {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.emergency-btn {
+    padding: 15px 40px;
+    background-color: white;
+    color: #ff4444;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.emergency-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .clinic-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #008cba;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 16px 0;
+    }
+}

@@ -1,0 +1,274 @@
+/* Inherit navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #008cba;
+    padding: 10px 20px;
+}
+  
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+  
+.nav-links li {
+    display: inline;
+}
+  
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+  
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 400px;
+    background-image: url('https://img.freepik.com/free-photo/gaming-room-setup_23-2150802809.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Games Gallery */
+.games-gallery {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.games-gallery h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.game-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+}
+
+.game-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.game-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.play-btn {
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #006688;
+}
+
+/* Activities Section */
+.activities {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.activities h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.activity-card {
+    text-align: center;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card .icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.pricing h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.price-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.price-card.featured {
+    transform: scale(1.05);
+    border: 2px solid #008cba;
+}
+
+.price-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.price {
+    font-size: 2.5em;
+    color: #008cba;
+    margin-bottom: 20px;
+}
+
+.price-card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.price-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.book-btn {
+    padding: 10px 25px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #006688;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .price-card.featured {
+        transform: none;
+    }
+
+    .games-grid,
+    .activities-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
